@@ -2,25 +2,25 @@
 
 ## v2.21.0
 
-* Support new [ATD](https://developer.android.com/studio/preview/features#gmd-atd) targets optimized to reduce CPU and memory resources when running instrumented tests: `aosp_atd`, `google_atd`. - [#198](https://github.com/ReactiveCircus/android-emulator-runner/pull/198). Note that currently these targets require the following:
+* Support new [ATD](https://developer.android.com/studio/preview/features#gmd-atd) targets optimized to reduce CPU and memory resources when running instrumented tests: `aosp_atd`, `google_atd`. - [#198](https://github.com/TestJken66/aemulator-ui/pull/198). Note that currently these targets require the following:
   * `api-level: 30`
   * `arch: x86` or `arch: arm64-v8a`
   * `channel: canary`
 
 ## v2.20.0
 
-* Support non-mobile targets: `android-wear`, `android-wear-cn`, `android-tv` and `google-tv`. - [#180](https://github.com/ReactiveCircus/android-emulator-runner/pull/180) @alexvanyo.
-* Update SDK command-line tools to `5.0`. - [#174](https://github.com/ReactiveCircus/android-emulator-runner/pull/174)
-* Update build tools to `31.0.0`. - [#174](https://github.com/ReactiveCircus/android-emulator-runner/pull/174)
-* Add option to specify the `channel` to download SDK components from: `stable` (default), `beta`, `dev` and `canary`. - [#185](https://github.com/ReactiveCircus/android-emulator-runner/pull/185)
+* Support non-mobile targets: `android-wear`, `android-wear-cn`, `android-tv` and `google-tv`. - [#180](https://github.com/TestJken66/aemulator-ui/pull/180) @alexvanyo.
+* Update SDK command-line tools to `5.0`. - [#174](https://github.com/TestJken66/aemulator-ui/pull/174)
+* Update build tools to `31.0.0`. - [#174](https://github.com/TestJken66/aemulator-ui/pull/174)
+* Add option to specify the `channel` to download SDK components from: `stable` (default), `beta`, `dev` and `canary`. - [#185](https://github.com/TestJken66/aemulator-ui/pull/185)
 
 ## v2.19.1
 
-* Accept all Android SDK Licenses to fix `sdkmanager` installation. - [#172](https://github.com/ReactiveCircus/android-emulator-runner/pull/172) @marcuspridham.
+* Accept all Android SDK Licenses to fix `sdkmanager` installation. - [#172](https://github.com/TestJken66/aemulator-ui/pull/172) @marcuspridham.
 
 ## v2.19.0
 
-* Add option to specify `ram-size` for the AVD. - [#165](https://github.com/ReactiveCircus/android-emulator-runner/pull/165).
+* Add option to specify `ram-size` for the AVD. - [#165](https://github.com/TestJken66/aemulator-ui/pull/165).
 
 
 ## v2.18.1
@@ -29,33 +29,33 @@
 
 ## v2.18.0
 
-* Add `force-avd-creation` which when set to `false` will skip avd creation if avd with same name exists. This enables AVD snapshot caching which can significantly reduce emulator startup time. See [README.md](https://github.com/ReactiveCircus/android-emulator-runner/blob/main/README.md#usage) for a sample workflow. - [#159](https://github.com/ReactiveCircus/android-emulator-runner/pull/159)
+* Add `force-avd-creation` which when set to `false` will skip avd creation if avd with same name exists. This enables AVD snapshot caching which can significantly reduce emulator startup time. See [README.md](https://github.com/TestJken66/aemulator-ui/blob/main/README.md#usage) for a sample workflow. - [#159](https://github.com/TestJken66/aemulator-ui/pull/159)
 
 ## v2.17.0
 
-* Add option to toggle Linux hardware acceleration - [#154](https://github.com/ReactiveCircus/android-emulator-runner/pull/154) @stevestotter
+* Add option to toggle Linux hardware acceleration - [#154](https://github.com/TestJken66/aemulator-ui/pull/154) @stevestotter
 
 ## v2.16.0
 
-* Avoid wrapping script code in quotes - [#134](https://github.com/ReactiveCircus/android-emulator-runner/pull/134) @hostilefork
-* Add option to disable spellcheck - [#143](https://github.com/ReactiveCircus/android-emulator-runner/pull/143) @AfzalivE
-* Add support for arm64-v8a for Apple Silicon Macs - [#146](https://github.com/ReactiveCircus/android-emulator-runner/pull/146) @Jeehut
+* Avoid wrapping script code in quotes - [#134](https://github.com/TestJken66/aemulator-ui/pull/134) @hostilefork
+* Add option to disable spellcheck - [#143](https://github.com/TestJken66/aemulator-ui/pull/143) @AfzalivE
+* Add support for arm64-v8a for Apple Silicon Macs - [#146](https://github.com/TestJken66/aemulator-ui/pull/146) @Jeehut
 
 ## v2.15.0
 
-* Added support for specifying the number of cores to use for the emulator - [#130](https://github.com/ReactiveCircus/android-emulator-runner/pull/130).
+* Added support for specifying the number of cores to use for the emulator - [#130](https://github.com/TestJken66/aemulator-ui/pull/130).
 
 ## v2.14.3
 
-* Support `macos-11.0` (Big Sur) runner - [#124](https://github.com/ReactiveCircus/android-emulator-runner/pull/124).
+* Support `macos-11.0` (Big Sur) runner - [#124](https://github.com/TestJken66/aemulator-ui/pull/124).
 
 ## v2.14.2
 
-* Support API 28 system images with `google_apis` or `google_apis_playstore` target - [#117](https://github.com/ReactiveCircus/android-emulator-runner/pull/117).
+* Support API 28 system images with `google_apis` or `google_apis_playstore` target - [#117](https://github.com/TestJken66/aemulator-ui/pull/117).
 
 ## v2.14.1
 
-* Fix hang during AVD creation when `profile` is not specified - [#113](https://github.com/ReactiveCircus/android-emulator-runner/issues/113).
+* Fix hang during AVD creation when `profile` is not specified - [#113](https://github.com/TestJken66/aemulator-ui/issues/113).
 
 ## v2.14.0
 
@@ -73,7 +73,7 @@ Added support for using the `playstore` system images:
 
 ```
 - name: run tests
-  uses: reactivecircus/android-emulator-runner@v2
+  uses: reactivecircus/aemulator-ui@v2
   with:
     api-level: 30
     target: playstore
@@ -88,7 +88,7 @@ Added support for using the `playstore` system images:
 
 ## v2.11.0
 
-* Support running multiple instances of the action sequentially in a single job - [#73](https://github.com/ReactiveCircus/android-emulator-runner/issues/73).
+* Support running multiple instances of the action sequentially in a single job - [#73](https://github.com/TestJken66/aemulator-ui/issues/73).
 
 ## v2.10.0
 
@@ -101,7 +101,7 @@ Added support for using the `playstore` system images:
 
 ## v2.8.0
 
-* Added support for specifying a custom name used for creating the **AVD** - [#59](https://github.com/ReactiveCircus/android-emulator-runner/issues/59).
+* Added support for specifying a custom name used for creating the **AVD** - [#59](https://github.com/TestJken66/aemulator-ui/issues/59).
 
 ## v2.7.0
 
@@ -113,24 +113,24 @@ Added support for using the `playstore` system images:
 
 ## v2.6.1
 
-* Fixed SDK license issue on Linux when downloading API 28+ system images - [#42](https://github.com/ReactiveCircus/android-emulator-runner/issues/42).
+* Fixed SDK license issue on Linux when downloading API 28+ system images - [#42](https://github.com/TestJken66/aemulator-ui/issues/42).
 
 ## v2.6.0
 
-* Added support for Linux VMs (no hardware acceleration) - [#15](https://github.com/ReactiveCircus/android-emulator-runner/issues/15).
+* Added support for Linux VMs (no hardware acceleration) - [#15](https://github.com/TestJken66/aemulator-ui/issues/15).
 
 ## v2.5.0
 
-* Added support for API 15-19 system images - [#26](https://github.com/ReactiveCircus/android-emulator-runner/issues/26).
-* Switched to the new SDK command-line tools which supports running `sdkmanager` and `avdmanager` with Java 9+ - [#25](https://github.com/ReactiveCircus/android-emulator-runner/issues/25).
+* Added support for API 15-19 system images - [#26](https://github.com/TestJken66/aemulator-ui/issues/26).
+* Switched to the new SDK command-line tools which supports running `sdkmanager` and `avdmanager` with Java 9+ - [#25](https://github.com/TestJken66/aemulator-ui/issues/25).
 
 ## v2.4.0
 
-* Added support for setting custom `working-directory` - e.g. `./android` if your root Gradle project is under the `./android` sub-directory within your repository - [#22](https://github.com/ReactiveCircus/android-emulator-runner/issues/22).
+* Added support for setting custom `working-directory` - e.g. `./android` if your root Gradle project is under the `./android` sub-directory within your repository - [#22](https://github.com/TestJken66/aemulator-ui/issues/22).
 
 ## v2.3.2
 
-* Fixed an issue where environment variables are escaped in script - [#19](https://github.com/ReactiveCircus/android-emulator-runner/issues/19).
+* Fixed an issue where environment variables are escaped in script - [#19](https://github.com/TestJken66/aemulator-ui/issues/19).
 
 ## v2.3.1
 

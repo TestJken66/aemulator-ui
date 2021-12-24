@@ -1,7 +1,7 @@
 # GitHub Action - Android Emulator Runner
 
 <p align="left">
-  <a href="https://github.com/ReactiveCircus/android-emulator-runner"><img alt="GitHub Actions status" src="https://github.com/ReactiveCircus/android-emulator-runner/workflows/Main%20workflow/badge.svg"></a>
+  <a href="https://github.com/TestJken66/aemulator-ui"><img alt="GitHub Actions status" src="https://github.com/TestJken66/aemulator-ui/workflows/Main%20workflow/badge.svg"></a>
 </p>
 
 A GitHub Action for installing, configuring and running hardware-accelerated Android Emulators on macOS virtual machines.
@@ -24,7 +24,7 @@ This action automates the process by doing the following:
 
 It is recommended to run this action on a **macOS** VM, e.g. `macos-latest` or `macos-10.15` to take advantage of hardware accleration support provided by **HAXM**.
 
-A workflow that uses **android-emulator-runner** to run your instrumented tests on **API 29**:
+A workflow that uses **aemulator-ui** to run your instrumented tests on **API 29**:
 
 ```
 jobs:
@@ -35,7 +35,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: run tests
-        uses: reactivecircus/android-emulator-runner@v2
+        uses: reactivecircus/aemulator-ui@v2
         with:
           api-level: 29
           script: ./gradlew connectedCheck
@@ -56,7 +56,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: run tests
-        uses: reactivecircus/android-emulator-runner@v2
+        uses: reactivecircus/aemulator-ui@v2
         with:
           api-level: ${{ matrix.api-level }}
           target: ${{ matrix.target }}
@@ -76,7 +76,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: run tests
-        uses: reactivecircus/android-emulator-runner@v2
+        uses: reactivecircus/aemulator-ui@v2
         with:
           api-level: 29
           ndk: 21.0.6113669
@@ -87,8 +87,8 @@ jobs:
 We can significantly reduce emulator startup time by setting up AVD snapshot caching:
 
 1. add an `actions/cache@v2` step for caching the `avd`
-2. add a `reactivecircus/android-emulator-runner@v2` step to generate a clean snapshot - specify `emulator-options` without `no-snapshot`
-3. add another `reactivecircus/android-emulator-runner@v2` step to run your tests using existing AVD / snapshot - specify `emulator-options` with `no-snapshot-save`
+2. add a `reactivecircus/aemulator-ui@v2` step to generate a clean snapshot - specify `emulator-options` without `no-snapshot`
+3. add another `reactivecircus/aemulator-ui@v2` step to run your tests using existing AVD / snapshot - specify `emulator-options` with `no-snapshot-save`
 
 ```
 jobs:
@@ -120,7 +120,7 @@ jobs:
 
       - name: create AVD and generate snapshot for caching
         if: steps.avd-cache.outputs.cache-hit != 'true'
-        uses: reactivecircus/android-emulator-runner@v2
+        uses: reactivecircus/aemulator-ui@v2
         with:
           api-level: ${{ matrix.api-level }}
           force-avd-creation: false
@@ -129,7 +129,7 @@ jobs:
           script: echo "Generated AVD snapshot for caching."
 
       - name: run tests
-        uses: reactivecircus/android-emulator-runner@v2
+        uses: reactivecircus/aemulator-ui@v2
         with:
           api-level: ${{ matrix.api-level }}
           force-avd-creation: false
@@ -168,7 +168,7 @@ Default `emulator-options`: `-no-window -gpu swiftshader_indirect -no-snapshot -
 
 The short answer is yes but on Github-hosted Linux runners it's expected to be a much worse experience (on some newer API levels it might not work at all) than running it on macOS. You can get it running much faster on self-hosted Linux runners but only if the underlying instances support KVM (which most don't).
 
-For a longer answer please refer to [this issue](https://github.com/ReactiveCircus/android-emulator-runner/issues/46).
+For a longer answer please refer to [this issue](https://github.com/TestJken66/aemulator-ui/issues/46).
 
 
 ## Who is using Android Emulator Runner?
@@ -184,8 +184,8 @@ These are some of the open-source projects using (or used) **Android Emulator Ru
 - [chrisbanes/insetter](https://github.com/chrisbanes/insetter/tree/main/.github/workflows)
 - [slackhq/keeper](https://github.com/slackhq/keeper/tree/main/.github/workflows)
 - [android/compose-samples](https://github.com/android/compose-samples/tree/main/.github/workflows)
-- [ReactiveCircus/streamlined](https://github.com/ReactiveCircus/streamlined/tree/main/.github/workflows)
-- [ReactiveCircus/FlowBinding](https://github.com/ReactiveCircus/FlowBinding/tree/main/.github/workflows)
+- [TestJken66/streamlined](https://github.com/TestJken66/streamlined/tree/main/.github/workflows)
+- [TestJken66/FlowBinding](https://github.com/TestJken66/FlowBinding/tree/main/.github/workflows)
 - [JakeWharton/RxBinding](https://github.com/JakeWharton/RxBinding/tree/master/.github/workflows)
 - [vinaygaba/Learn-Jetpack-Compose-By-Example](https://github.com/vinaygaba/Learn-Jetpack-Compose-By-Example/tree/master/.github/workflows)
 - [ashishb/adb-enhanced](https://github.com/ashishb/adb-enhanced/tree/master/.github/workflows)
